@@ -10,7 +10,7 @@
 resource "aws_security_group" "allow_ssh_terraform" {
     description = "allow-port-22 for SSH"
 
-    egress {  # egress means outbound rules that is outing traffic
+    egress {  # egress means outbound rules that is outgoing traffic
     from_port        = 0
     to_port          = 0
     protocol         = "-1" 
@@ -20,7 +20,7 @@ resource "aws_security_group" "allow_ssh_terraform" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
-    ingress {  # egress means outbound rules that is outing traffic
+    ingress {  # egress means outbound rules that is incoming traffic
     from_port        = 22
     to_port          = 22
     protocol         = "tcp" # # Use "tcp" instead of "-1"
