@@ -1,4 +1,5 @@
-# below is for practcing the conditonal statments
+# below is for practcing the conditonal statments for ec2 instance creation instance type
+
 
 
 resource "aws_security_group" "allow_ssh_terraform" {
