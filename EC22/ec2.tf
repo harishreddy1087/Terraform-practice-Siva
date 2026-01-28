@@ -2,9 +2,9 @@
 
 # in this im using the variables
 
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "allow_ssh_terraform" {
     name = var.sg_name
-    description = "var.sg_description"
+    description = var.sg_description
 
     egress {  # egress means outbound rules that is outgoing traffic
     from_port        = 0
@@ -33,8 +33,8 @@ resource "aws_security_group" "allow_ssh" {
 
 # crerating EC2 instance with name terra-ec2
 resource "aws_instance" "terra-ec2" {
-  ami = "var.ami_id"
-  instance_type = "var.instance_id"
+  ami = var.ami_id
+  instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id] # we are using already created the SG which i have crerated above before the instance creation.
 
   tags =var.tags

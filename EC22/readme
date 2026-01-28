@@ -1,0 +1,76 @@
+
+// Collection Types (Groups of the Same Thing)
+// These hold multiple values, but every value must be the same type (e.g., all strings or all numbers).
+
+// list: An ordered list where you can have duplicates.
+
+// Terraform
+// variable "subnets" {
+//   type    = list(string)
+//   default = ["subnet-1", "subnet-2", "subnet-1"] # Order matters, duplicates OK
+// }
+
+
+
+
+// map: A lookup table of key-value pairs.
+
+// Terraform
+// variable "instance_sizes" {
+//   type = map(string)
+//   default = {
+//     "dev"  = "t2.micro"
+//     "prod" = "m5.large"
+//   }
+// }
+
+
+
+// set: Like a list, but every value must be unique and order doesn't matter.
+
+// Terraform
+// variable "unique_ports" {
+//   type    = set(number)
+//   default = [80, 443] # If you add 80 twice, Terraform removes the second one
+// }
+
+
+
+// Structural Types (The Power Tools)
+// These allow you to mix and match different types into one single variable. They are great for complex configurations.
+
+// object: A group of named attributes, each with its own type. (Very common for server configs).
+
+// Terraform
+// variable "server_config" {
+//   type = object({
+//     name = string
+//     port = number
+//     is_public = bool
+//   })
+//   default = {
+//     name = "web-server"
+//     port = 80
+//     is_public = true
+//   }
+// }
+
+// tuple: A fixed-length list where each position can be a different type.
+
+// Terraform
+// variable "my_tuple" {
+//   type    = tuple([string, number, bool])
+//   default = ["hello", 101, true] # Must stay in this exact order/count
+// }
+
+
+// Which one should you use?
+// Use string for things like AMI IDs, Instance IDs, or Names.
+
+// Use list(string) for Availability Zones or Subnet IDs.
+
+// Use map(string) for Tags (like your previous example).
+
+// Use object if you want to pass a whole "profile" of information to a module.
+
+
