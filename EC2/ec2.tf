@@ -37,4 +37,16 @@ resource "aws_security_group" "allow_ssh_terraform" {
 }
 
 
+resource "aws_instance" "terra-ec2" {
+  ami = "ami-0b6c6ebed2801a5cb"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id] # we are using already created the SG which i have crerated above before the instance creation.
+
+  tags = {
+    Name = "terra-ec2"
+  }
+}
+
+
+
 
