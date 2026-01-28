@@ -1,4 +1,4 @@
-# below is for practcing the conditonal statments for ec2 instance creation instance type
+# below is for practcing the conditonal statments for ec2 instance creation instance type and outputs
 
 
 
