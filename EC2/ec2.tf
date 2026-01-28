@@ -36,7 +36,7 @@ resource "aws_security_group" "allow_ssh_terraform" {
    
 }
 
-
+# crerating EC2 instance with name terra-ec2
 resource "aws_instance" "terra-ec2" {
   ami = "ami-0b6c6ebed2801a5cb"
   instance_type = "t2.micro"
