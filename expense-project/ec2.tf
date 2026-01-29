@@ -1,5 +1,5 @@
 
-# in this we can practice the common tags and merge function.
+# in this we can practice the common tags and merge function. and outputs
 
 
 resource "aws_security_group" "allow_ssh_terraform" {
