@@ -1,8 +1,4 @@
-# for creating the EC2 Instance we have follow the below steps
-
-# 1. create the Security groups
-# 2. VPC
-# 3. subnets
+# for creating the state file and storing in s3 to avoid multiple init and locking with dynamo db
 
 
 # 1.creating the Security groups
