@@ -1,0 +1,27 @@
+coammds to create the workspaces
+----------------------
+Create a New Workspace
+
+terraform workspace new <env> dev, uat, prod
+---------------------
+List All Workspaces
+
+terraform workspace list == This shows all available workspaces. The one you are currently using will have an asterisk (*) next to it.
+
+--------------
+Show Current Workspace
+
+terraform workspace show == If you just want to know the name of the workspace you are currently in without seeing the whole list
+--------------
+Switch (Select) a Workspace
+
+terraform workspace select <env> prod, uat, dev == To move from one environment to another, use the select command.
+-----------------
+
+Delete a Workspace
+
+terraform workspace delete <env> uat, prod, dev === To remove a workspace and its associated state file:
+** Safety Check: You cannot delete the workspace you are currently "inside." You must select a different one (like default) before deleting.
+
+Resource Check: Terraform will prevent you from deleting a workspace if it still contains active resources (infrastructure).
+ You should run terraform destroy first.
