@@ -1,34 +1,25 @@
-# variable "regions" {
-#   type    = string
-#   default = "us-east-1"
-
-# }
+variable "region" {
+  type = string
+  # here im not using the variables because by using this im learning the workspaces with indivdual env.tfvars
+}
 
 variable "instance_types" {
-  type    = list(string)
-  default = [ "t2.micro", "t3.micro", "t3.small" ]
+  type = list(string)
 
 }
 
 
 variable "ami_id" {
-  type    = string
-  default = "ami-019715e0d74f695be"
+  type = string
 
 }
 
 variable "instance_count" {
-    type = number
-    default = 1
-  
+  type = number
+
 }
 
 variable "instance_tags" {
-    type = map(string)
-    default = {
-      "developer" = "hari"
-      "project" = "hari_project"
-      "environment" = "dev"
-    }
-  
+  type = map(string)
+
 }

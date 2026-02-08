@@ -1,3 +1,7 @@
+terraform plan -var-file=dev,tfvars by this we czn create the instance using only dev related config files
+by this if we want to create the new resource it will destroy the existing one.
+
+
 coammds to create the workspaces
 ----------------------
 Create a New Workspace
