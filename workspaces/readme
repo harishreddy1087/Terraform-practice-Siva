@@ -29,3 +29,14 @@ terraform workspace delete <env> uat, prod, dev === To remove a workspace and it
 
 Resource Check: Terraform will prevent you from deleting a workspace if it still contains active resources (infrastructure).
  You should run terraform destroy first.
+
+ -------------
+ terraform plan -var-file=dev.tfvars -auto-approve
+ terraform apply -var-file=dev.tfvars -auto-approve
+ terraform destroy -var-file=dev.tfvars -auto-approve
+
+ bestpractice:
+
+ delete the workspace after destroying the resource.
+ deleteing the workspace you should have must not be there in the actual deleting workspace
+ so if u want to delete the prod workspace you must stay antother workspace or in defalut one
