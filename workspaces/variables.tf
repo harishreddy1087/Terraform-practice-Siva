@@ -19,6 +19,16 @@ variable "ami_id" {
 
 variable "instance_count" {
     type = number
-    default = 2
+    default = 1
+  
+}
+
+variable "instance_tags" {
+    type = map(string)
+    default = {
+      "developer" = "hari"
+      "project" = "hari_project"
+      "environment" = "dev"
+    }
   
 }

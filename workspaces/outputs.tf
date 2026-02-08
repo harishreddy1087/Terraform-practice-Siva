@@ -5,6 +5,6 @@ output "public_ip" {
 }
 
 output "instance1_private_ip" {
-    value = aws_instance.jems[1].instance_state
+    value = aws_instance.jems[0].instance_state
   
 }
