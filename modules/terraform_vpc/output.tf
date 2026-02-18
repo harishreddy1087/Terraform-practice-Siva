@@ -4,7 +4,7 @@ output "vpc_id" {
 }
 
 # by this way we can check the AZ availability in region us-east-1 which mentioned in provider
-output "az_info" {
-    value = data.aws_availability_zones.available
+# output "az_info" {
+#     value = data.aws_availability_zones.available
   
-}
+# }

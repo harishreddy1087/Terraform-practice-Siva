@@ -36,3 +36,24 @@ variable "private_subnet_cidrs" {
     }
   
 }
+
+variable "database_subnet_cidrs" {
+    type = list(string)
+    validation {
+      condition = length(var.database_subnet_cidrs) == 2 
+      error_message = "please provide 2 valid database subnet CIDR"
+    }
+  
+}
+
+variable "aws_db_subnet_group" {
+    type = string
+
+  
+}
+
+variable "destination_cidr" {
+    type = string
+    
+  
+}
