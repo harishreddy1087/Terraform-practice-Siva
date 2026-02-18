@@ -9,5 +9,5 @@ module "vpc" {
   private_subnet_cidrs  = var.private_subnet_cidrs
   database_subnet_cidrs = var.database_subnet_cidrs
   aws_db_subnet_group   = var.aws_db_subnet_group
-  destination_cidr = var.destination_cidr
+  destination_cidr      = var.destination_cidr
 }

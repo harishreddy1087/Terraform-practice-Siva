@@ -52,7 +52,7 @@ variable "aws_db_subnet_group" {
 }
 
 variable "destination_cidr" {
-    type = string
-    default = "0.0.0.0/0"
-  
+  type    = string
+  default = "0.0.0.0/0"
+
 }
