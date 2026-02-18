@@ -12,13 +12,3 @@ output "EC2_Private_ip" {
   value = module.ec2_instance.EC2_Private_ip
 
 }
-
-output "Bucket_status" {
-  value = module.s3_bucket.Bucket_status
-
-}
-
-output "bucket_id" {
-  value = module.s3_bucket.bucket_id
-
-}
